@@ -1,9 +1,9 @@
 board = [' ' for x in range(9)]
 
 def print_board(): #выводит поле для игры
-    row1 = "| {} | {} | {} |".format(board[0], board[1], board[2])
-    row2 = "| {} | {} | {} |".format(board[3], board[4], board[5])
-    row3 = "| {} | {} | {} |".format(board[6], board[7], board[8])
+    row1 = f"| {board[0]} | {board[1]} | {board[2]} |"
+    row2 = f"| {board[3]} | {board[4]} | {board[5]} |"
+    row3 = f"| {board[6]} | {board[7]} | {board[8]} |"
 
     print()
     print(row1)
@@ -43,7 +43,6 @@ def is_draw(): #Ничья или победа того или иного игр
         return True
     else:
         return False
-
     while True:
         print_board()
         player_move('X')
@@ -62,4 +61,5 @@ def is_draw(): #Ничья или победа того или иного игр
         elif is_draw():
             print("Это ничья!")
             break
+
 
